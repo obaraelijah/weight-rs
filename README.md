@@ -20,6 +20,8 @@ Waiting for 10 seconds before exiting.
 Exiting after waiting for 10 seconds.
 ```
 
+![Activity Monitor on OSX](assets/activity-monitor-osx.pngpng)
+
 ## Todo
 
 * Support putting weight on CPU
