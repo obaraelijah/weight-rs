@@ -1,7 +1,7 @@
 use std::thread;
 use std::time::Duration;
 
-pub fn wait(seconds: i32) {
+pub fn wait(seconds: u32) {
     if seconds == 0 {
         println!("CTRL + C to exit.");
         loop {

@@ -10,9 +10,9 @@ struct Args {
     #[arg(short, long, default_value_t = String::from("1B"))]
     memory: String,
 
-    /// Amount of time in seconds wait before exiting the program 0 means wait forever
+    /// Amount of time in seconds wait before exiting the program. 0 means wait forever
     #[arg(short, long, default_value_t = 60)]
-    wait: i32,
+    wait: u32,
 }
 
 fn main() {
@@ -21,7 +21,7 @@ fn main() {
     wait::wait(args.wait);
 }
 
-fn allocate_memory(memory: &str){
+fn allocate_memory(memory: &str) {
     println!("Writing {} of memory...", memory);
     match memory::allocate_memory(memory) {
         Ok(bytes) => {
@@ -29,6 +29,7 @@ fn allocate_memory(memory: &str){
         }
         Err(err) => {
             eprintln!("Error parsing memory string: {} use -h to see examples", err);
+            std::process::exit(1);
         }
     }
 }

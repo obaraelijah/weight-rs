@@ -1,4 +1,4 @@
-## Weight
+# Weight-rs
 
 Puts weight on system resources such as memory and soon CPU and disk.
 
